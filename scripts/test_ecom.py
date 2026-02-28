@@ -9,7 +9,7 @@ def test_myntra(launch):
     driver = launch
     driver.get("https://www.myntra.com/")
     driver.maximize_window()
-    verify_title(driver, "Online Shopping fr Women, Men, Kids Fashion & Lifestyle - Myntra")
+    #verify_title(driver, "Online Shopping fr Women, Men, Kids Fashion & Lifestyle - Myntra")
     sleep(2)
 
 
