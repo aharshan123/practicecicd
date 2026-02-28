@@ -1,0 +1,6 @@
+pytest  --reruns 2
+pytest -->batch execution
+pytest --browser = browsername
+pytest --html = report.html
+pytest --lf (last failed)
+pytest -n 2/auto
