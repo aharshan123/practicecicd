@@ -39,28 +39,3 @@ def launch(request):
     yield driver
     driver.quit()
 
-import pytest
-
-passed = 0
-failed = 0
-
-@pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    global passed, failed
-    outcome = yield
-    report = outcome.get_result()
-
-    if report.when == "call":
-        if report.passed:
-            passed += 1
-        elif report.failed:
-            failed += 1
-
-@pytest.fixture(scope="session", autouse=True)
-def final_count():
-    yield
-    print("\n======================")
-    print("Passed Testcases :", passed)
-    print("Failed Testcases :", failed)
-    print("======================")
-
