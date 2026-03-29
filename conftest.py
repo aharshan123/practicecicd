@@ -32,8 +32,8 @@ def launch(request):
     elif browser == "firefox":
         driver = webdriver.Firefox()
 
-    #elif browser == "edge":
-        #driver = webdriver.Edge()
+    elif browser == "edge":
+        driver = webdriver.Edge()
 
     driver.maximize_window()
     yield driver
